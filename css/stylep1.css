@@ -1,43 +1,113 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    font-family: Arial,sans-serif;
-}
-a{
-    text-decoration: none;
+body {
+    font-family: 'Montserrat', sans-serif; /* גופן מודרני ומקצועי */
+    background-color: #fcfcfc;
     color: #333;
+    overflow-x: hidden; /* מניעת גלילה אופקית - חובה  */
 }
-.main-header{
+
+/* ה-Container המהודק שלך */
+.header-container {
+    max-width: 1000px; /* המרחק האידיאלי שחיפשת */
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
+    padding: 0 20px;
 }
-.logo{
+
+/* =========================================
+   3. Main Header
+   ========================================= */
+/* =========================================
+   Main Header - Professional Wide Version
+   ========================================= */
+.main-header {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 30px 0; /* הדר מעט יותר גבוה למסך גדול */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border-bottom: 1px solid #eee;
+}
+
+/* המיכל המרכזי - מותאם למסך רחב (Ultra-Wide Friendly) */
+.header-container {
+    /* שימוש ברוחב מקסימלי שמתאים למסכים גדולים (1600px) */
+    max-width: 1600px; 
+    margin: 0 auto;
     display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 20px;
-    font-weight: bold;
-    color: #333;
-    letter-spacing: 2px;
+    /* לוגו משמאל, תפריט ימין לפי דרישה בעמוד 6 [cite: 35, 36] */
+    justify-content: space-between; 
+    align-items: center; /* יישור אנכי מושלם לכל האלמנטים */
+    padding: 0 50px;
+    width: 100%;
 }
-.main-nav ul{
+
+/* --- עיצוב הלוגו (צד שמאל) --- */
+.logo {
+    display: flex;
+    align-items: center; /* מסדר את המכונית בקו אחד עם הטקסט */
+    gap: 20px;
+    text-decoration: none;
+}
+
+.logo-icon {
+    font-size: 50px; /* גודל פרופורציונלי למסך 27 אינץ' */
+    line-height: 1;
+}
+
+.logo-text {
+    font-size: 42px;
+    font-weight: 900;
+    color: #1a1a1a;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+/* --- תפריט הניווט (צד ימין) --- */
+.main-nav ul {
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 55px; /* ריווח נקי בין הלינקים */
+    align-items: center;
 }
-.main-nav a{
-    font-size: 16px;
-    transition: color 0.3 ease;
+
+.main-nav a {
+    text-decoration: none;
+    font-size: 19px; /* טקסט קריא וברור על מסך גדול */
+    font-weight: 400;
+    color: #666;
+    position: relative;
+    transition: color 0.3s ease;
 }
-.main-nav a.active{
-    font-weight: bold;
+
+/* דרישה: העמוד הנוכחי הופך למודגש (Bold) [cite: 36] */
+.main-nav a.active {
+    font-weight: 700;
+    color: #7b2cbf; /* סגול כהה */
 }
-.main-nav a:hover{
-    color: #8b5cf6;
+
+/* דרישה: במעבר עכבר הגופן הופך לצבע סגלגל [cite: 37] */
+.main-nav a:hover {
+    color: #9d4edd; /* סגול בהיר */
+    cursor: pointer; /* סימן יד לאלמנט לחיץ [cite: 139] */
+}
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #9d4edd;
+    transition: width 0.3s ease;
+}
+.main-nav a:hover::after {
+    width: 100%;
 }
