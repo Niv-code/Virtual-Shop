@@ -46,15 +46,19 @@ body {
 .logo {
     display: flex;
     align-items: center; 
-    gap: 20px;
-    text-decoration: none;
+    gap: 12px; 
 }
 
 .logo-icon {
-    font-size: 50px; 
-    line-height: 1;
+    height: 45px;  
+    width: auto;  
+    display: inline-block;
+    vertical-align: middle; 
 }
-
+.logo span {
+    display: flex;
+    align-items: center;
+}
 .logo-text {
     font-size: 42px;
     font-weight: 900;
@@ -330,7 +334,7 @@ body {
 }
 
 
-.footer-col h4 {
+#title {
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     font-weight: 700;
@@ -387,4 +391,103 @@ body {
     font-size: 14px;
     font-weight: bold;
     color: #666;
+}
+/* =========================================
+    second page 
+   ========================================= */
+
+.gallery-section{
+    padding: 40px 0;
+    width: 100%;
+    margin-bottom: 32px;
+}
+.gallery-container{
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 0 40px;
+}
+.gallery-item{
+    height: 350px;
+    border: 6px solid #8e59bc;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+.gallery-item wide{
+    width: 600px;
+}
+.gallery-item medium{
+    width: 400px;
+}
+.gallery-item narrow{
+    width: 200;
+}
+.list-of-cars-section{
+    padding: 40px 0;
+    width: 100%;
+    margin-bottom: 32px;
+}
+.list-container{
+    max-width: 1600px; 
+    margin: 0 auto;
+    padding: 0 40px;
+}
+.list-container ul{
+    list-style: none;
+    padding: 0;
+}
+.list-container ul li{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 18px;
+    
+    font-family:'Lucida Sans',Geneva;
+    font-size: 22px;      
+    font-weight: 700;     
+    letter-spacing: 1px;  
+    color: #1a1a1a;
+    text-transform: uppercase;  
+}
+.rocket-icon{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    filter: grayscale(50%);
+    transition: all 0.3s ease;
+}
+
+.simple-table-section {
+    max-width: 1600px; 
+    margin: 0 auto;
+    text-align: center; 
+    padding: 0 40px;
+}
+.simple-table-section h2 {
+    margin-bottom: 30px;
+    display: block;
+}
+.basic-table {
+    width: 90%;
+    max-width: 1200px; 
+    margin: 0 auto; 
+    border-collapse: collapse;
+    background-color: #edebeb;
+}
+
+.basic-table th, .basic-table td {
+    border: 1px solid #545353;
+    padding: 18px; 
+    text-align: center; 
+    font-family: 'Montserrat', sans-serif;        
+}
+
+.basic-table th {
+    background-color: #545353;
+    font-weight: 700;
+    text-transform: uppercase;
 }
