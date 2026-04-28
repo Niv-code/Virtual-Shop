@@ -307,3 +307,84 @@ body {
 .basket-icon:hover {
     background-color: #9d4edd;
 }
+/* =========================================
+   5. Footer Section 
+   ========================================= */
+.main-header, .main-footer {
+    width: 100%;
+}
+.main-footer {
+    width: 100%;
+    background-color: #c1ecee;
+    padding: 20px 0;
+    color: #4a4a4a;
+}
+
+.footer-container{
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 60px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 150px;
+}
+
+
+.footer-col h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px; 
+}
+.footer-col ul li {
+    margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+    text-decoration: none;
+    color: #555;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+.footer-col ul li a:hover {
+    color: #bf2c2c; 
+}
+
+.social-links{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.social-icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    filter: grayscale(100%); 
+    transition: filter 0.3s;
+}
+.social-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.social-icon:hover {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+.footer-bottom {
+    max-width: 1600px;
+    margin: 40px auto 0 auto;
+    padding: 20px 60px 0 60px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    font-size: 14px;
+    font-weight: bold;
+    color: #666;
+}
